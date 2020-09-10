@@ -5,8 +5,15 @@ import sqlite3
 sqlite3.enable_callback_tracebacks(True)
 
 
+def resolve_txt(hostname):
+    return dns.resolver.resolve(hostname, "TXT").response
+
+
 def dns_txt(hostname):
-    message = dns.resolver.resolve(hostname, "TXT").response
+    try:
+        message = resolve_txt(hostname)
+    except dns.resolver.NoAnswer as e:
+        return str(e)
     return message.to_text()
 
 

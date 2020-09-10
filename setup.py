@@ -29,6 +29,6 @@ setup(
     packages=["datasette_dns"],
     entry_points={"datasette": ["dns = datasette_dns"]},
     install_requires=["datasette", "dnspython"],
-    extras_require={"test": ["pytest", "pytest-asyncio", "httpx"]},
+    extras_require={"test": ["pytest", "pytest-asyncio", "httpx", "pytest-mock"]},
     tests_require=["datasette-dns[test]"],
 )
