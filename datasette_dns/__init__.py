@@ -1,5 +1,8 @@
 from datasette import hookimpl
 import dns.resolver
+import sqlite3
+
+sqlite3.enable_callback_tracebacks(True)
 
 
 def dns_txt(hostname):
