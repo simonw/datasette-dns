@@ -19,6 +19,8 @@ So far the only supported SQL function is:
 
     select dns_txt("oreilly.com");
 
+Try this out in [the live demo](https://datasette-dns-demo.vercel.app/empty?sql=select+dns_txt%28%22oreilly.com%22%29%3B).
+
 ## Development
 
 To set up this plugin locally, first checkout the code. Then create a new virtual environment:
